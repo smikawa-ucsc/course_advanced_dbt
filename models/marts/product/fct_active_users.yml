@@ -1,0 +1,15 @@
+models:
+  - name: fct_active_users
+    description: Active users
+    columns:
+      - name: surrogate_key
+        description: The surrogate key. This acts as a primary key for this model.
+        tests:
+          - not_null
+          - unique
+      - name: date_week
+        description: 'day of week'
+      - name: user_id
+        description: '{{ doc("bingeflix_user_id")}}'
+      - name: login_count
+        description: 'Login count'
