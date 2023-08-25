@@ -29,7 +29,31 @@ seeds:
   dbt_project_evaluator:
     dbt_project_evaluator_exceptions:
       +enabled: false
-
+  course_advanced_dbt:
+    unit_testing:
+      +schema: unit_testing
+      +tags: unit_testing
+      dim_dates_sample:
+        +column_types:
+          CALENDAR_DATE: date
+          date_week: date
+          date_month: date
+          date_quarter: date
+          date_year: date
+          day_of_month: integer
+          year_num: integer
+          quarter_num: integer
+          month_num: integer
+      dim_subscriptions_sample:
+        +column_types:
+          SUBSCRIPTION_ID: integer
+          SUBSCRIPTION_PLAN_ID: integer
+          USER_ID: integer
+          STARTS_AT: datetime
+          ENDS_AT: datetime
+          PLAN_NAME: varchar
+          PRICING: integer
+          BILLING_PERIOD: varchar
 vars:
   exclude_paths_from_project: ["/marts/core/fct_events.sql"]
 
