@@ -1,0 +1,21 @@
+version: 2
+
+macros:
+  - name: rolling_periods
+    description: A macro to perform an aggregate function over a certain number(interval) of periods
+    arguments:
+      - name: column_name
+        type: string
+        description: name of the column to aggregate
+      - name: partition_by
+        type: string
+        description: name of the column to partition by
+      - name: order_by
+        type: string
+        description: name of the column to order the partitions by
+      - name: interval
+        type: integer
+        description: how many partitions to count before resetting
+      - name: aggregation_function
+        type: string
+        description: name of the aggregation function to use

@@ -68,7 +68,7 @@ When the subscription ends. This value is NULL if the subscription is active.
 
 ## Users
 {% docs bingeflix_user_id %}
-The unique identifier of the Bingeflix user. 
+The unique identifier of the Bingeflix user.
 {% enddocs %}
 
 {%docs table_users %}

@@ -1,6 +1,7 @@
 sources:
   - name: ads_platform
     schema: public
+    description: This is the raw ads platform table
     database: raw
     tables:
       - name: daily_ads

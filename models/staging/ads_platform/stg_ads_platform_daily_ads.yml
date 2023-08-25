@@ -1,6 +1,6 @@
 models:
   - name: stg_ads_platform_daily_ads
-    description: "The daily ad campaigns table."
+    description: The daily ad campaigns table.
     columns:
       - name: date
         description: "The calendar date of the campaign reporting period."
