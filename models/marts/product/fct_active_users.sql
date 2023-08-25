@@ -21,13 +21,15 @@ date_spine AS (
 
 final AS (
     SELECT
+        --MD5(date_week || user_id) AS surrogate_key,
+        {{ dbt_utils.generate_surrogate_key(['date_week', 'user_id']) }} AS surrogate_key,
         date_week,
         user_id,
         COUNT(DISTINCT login_id) AS login_count
     FROM
         date_spine
         LEFT JOIN events ON date_spine.calendar_date = events.created_date
-    GROUP BY 1, 2
+    GROUP BY 1, 2, 3
 )
 
 SELECT * FROM final

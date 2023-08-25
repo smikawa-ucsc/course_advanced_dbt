@@ -6,3 +6,4 @@ sources:
     tables:
       - name: daily_ads
         identifier: ads
+        description: daily add info
