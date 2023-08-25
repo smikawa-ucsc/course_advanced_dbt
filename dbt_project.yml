@@ -33,17 +33,17 @@ seeds:
     unit_testing:
       +schema: unit_testing
       +tags: unit_testing
-      dim_dates_sample:
+      dim_dates_full:
         +column_types:
           CALENDAR_DATE: date
-          date_week: date
-          date_month: date
-          date_quarter: date
-          date_year: date
-          day_of_month: integer
-          year_num: integer
-          quarter_num: integer
-          month_num: integer
+          DATE_WEEK: date
+          DATE_MONTH: date
+          DATE_QUARTER: date
+          DATE_YEAR: date
+          DAY_OF_MONTH: integer
+          YEAR_NUM: integer
+          QUARTER_NUM: integer
+          MONTH_NUM: integer
       dim_subscriptions_sample:
         +column_types:
           SUBSCRIPTION_ID: integer
@@ -54,6 +54,23 @@ seeds:
           PLAN_NAME: varchar
           PRICING: integer
           BILLING_PERIOD: varchar
+      unit_test_results:
+        +column_types:
+          SURROGATE_KEY: varchar
+          DATE_MONTH: date
+          USER_ID: integer
+          SUBSCRIPTION_ID: int
+          STARTS_AT: datetime
+          ENDS_AT: datetime
+          PLAN_NAME: varchar
+          MRR_AMOUNT: int
+          MRR_CHANGE: int
+          RETAINED_MRR_AMOUNT: int
+          PREVIOUS_MONTH_MRR_AMOUNT: int
+          CHANGE_CATEGORY: varchar
+          MONTH_RETAINED_NUMBER: int
+
+
 vars:
   exclude_paths_from_project: ["/marts/core/fct_events.sql"]
 
